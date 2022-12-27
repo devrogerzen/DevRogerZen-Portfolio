@@ -1,9 +1,11 @@
 import { MainLayout } from "../components/layouts/MainLayout";
 
-export default function Contents() {
+const Works = () => {
   return (
     <MainLayout>
-      <h1>I am /Contents Page</h1>
+      <h1>im works</h1>
     </MainLayout>
   );
-}
+};
+
+export default Works;

@@ -1,9 +1,11 @@
 import { MainLayout } from "../components/layouts/MainLayout";
 
-export default function Contents() {
+const Services = () => {
   return (
     <MainLayout>
-      <h1>I am /Contents Page</h1>
+      <h1>I m services</h1>
     </MainLayout>
   );
-}
+};
+
+export default Services;
