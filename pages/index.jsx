@@ -4,7 +4,7 @@ import { MainLayout } from "../components/layouts/MainLayout";
 export default function Home() {
   return (
     <MainLayout>
-      <h1>I am /Home</h1>
+      <h1>Arbol de Habilidades</h1>
       <Banner />
     </MainLayout>
   );

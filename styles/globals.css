@@ -1,10 +1,22 @@
+@font-face {
+  font-family: "SourceSansPro";
+  src: local("SourceSansPro"),
+    url("../components/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf")
+      format("truetype");
+  font-family: "SourceSansProBlack";
+  src: local("SourceSansProBlack"),
+    url("../components/fonts/Source_Sans_Pro/SourceSansPro-Black.ttf")
+      format("truetype");
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: #efefef;
+  font-family: SourceSansPro, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  background-color: #efefef;
 }
 
 * {
@@ -16,32 +28,11 @@ a {
   text-decoration: none;
 }
 
+
 /* NAVBAR HOME */
 
-.navbar_home {
-  width: 100%;
-  font-size: 18px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: orange;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  background-color: white;
-  padding: 0 20px;
-}
-
-.container_center {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;  
-}
-
 .nav-link {
-  margin-left: 15px;
-  color: #0070f3;
+  color: #000;
   font-weight: bold;
 }
 
@@ -49,30 +40,4 @@ a {
   color: black;
   text-decoration: underline;
   font-weight: bold;
-  margin-left: 15px;
-};
-
-
-/* BANNER HOME */
-
-.banner_img {
-  width: 100%;
-  height: 300px;
 }
-
-.banner_background {
-  width: 100%;
-  height: 300px;
-  background-color: rgba(228, 198, 33, 0.8);
-  display: flex;
-  align-items: center;
-}
-
-.banner_info {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  padding-left: 20px;
-  }
-
-  /* Formulario */
