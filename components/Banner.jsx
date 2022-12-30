@@ -1,12 +1,13 @@
 import Image from "next/image";
-import LogoDrogerZen from "../public/logodrogerz.png";
 import styled from "styled-components";
+import LogoDrogerZen from "../public/logodrogerz.png";
 
 export function Banner() {
   const Banner_img = styled.div`
     width: 100%;
-    min-height: 30vh;
-    background-color: #000;
+    min-height: 25vh;
+    background-color: #fcfcfc;
+    color: #000;
     h1,
     h2,
     h3,
@@ -14,12 +15,15 @@ export function Banner() {
       margin: 0;
       padding: 0;
     }
+    p {
+      font-weight: 500;
+    }
   `;
 
   const Banner_background = styled.div`
     width: 100%;
-    min-height: 30vh;
-    background-color: rgba(228, 198, 33, 0.8);
+    min-height: 25vh;
+    background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
   `;
@@ -53,7 +57,7 @@ export function Banner() {
             Soy un Desarrollador Web FullStack que se especializa en crear (y
             ocasionalmente diseñar) experiencias digitales excepcionales.
             Actualmente, estoy centrado en la creación de productos accesibles
-            centrados en la mejorar la facilidad comercial ser humano.
+            centrados en mejorar la facilidad comercial ser humano.
           </p>
         </Banner_info>
       </Banner_background>
