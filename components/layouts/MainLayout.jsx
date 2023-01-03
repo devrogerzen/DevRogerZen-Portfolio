@@ -10,7 +10,7 @@ export const MainLayout = ({ children }) => {
         <link rel="icon" href="/logodrogerz.png" />
       </Head>
       <Navbar />
-      <main className={'container_center'}>
+      <main>
         {children}
       </main>
     </div>
