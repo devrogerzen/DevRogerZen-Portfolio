@@ -1,6 +1,9 @@
-import Image from "next/image";
 import { ActiveLink } from "./ActiveLink";
 import styled from "styled-components";
+import GitHubIcon from "../public/img/icons/github.png";
+import LinkedinIcon from "../public/img/icons/linkedin.png";
+import Image from "next/image";
+import Link from "next/link";
 
 export function Navbar({ href, text }) {
   const Navbar_home = styled.nav`
@@ -15,9 +18,7 @@ export function Navbar({ href, text }) {
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     position: sticky;
     color: #fff;
-    
   `;
-
 
   const Title_logo = styled.div`
     display: flex;
@@ -33,8 +34,20 @@ export function Navbar({ href, text }) {
     list-style: none;
     padding: 0;
     font-size: 1.1rem;
+
     li {
       padding-left: 15px;
+    }
+  `;
+
+  const Socialicons = styled.div`
+    display: flex;
+    flex-wrap: nowrap;
+    img {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      margin-right: 40px;
     }
   `;
 
@@ -65,7 +78,17 @@ export function Navbar({ href, text }) {
           <ActiveLink href="/contact" text="Contacto"></ActiveLink>
         </li>
       </Menu_pages>
-      <div>Social&Login&logaut</div>
+      <Socialicons>
+        <Link
+          target="_blank"
+          href="https://www.linkedin.com/in/roger-jimenez-3929149b"
+        >
+          <Image src={LinkedinIcon} alt="icon" />
+        </Link>
+        <Link target="_blank" href="https://github.com/devrogerzen">
+          <Image src={GitHubIcon} alt="icon" />
+        </Link>
+      </Socialicons>
     </Navbar_home>
   );
 }

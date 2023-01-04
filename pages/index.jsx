@@ -18,7 +18,6 @@ const TitleTypedCursor = styled.div`
   width: 100%;
   padding-left: 4vw;
   margin-top: 30vh;
-
   h1 {
     color: #fff;
     margin: 0;
