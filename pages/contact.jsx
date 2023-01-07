@@ -25,9 +25,7 @@ const ContactUs = () => {
 
           Swal.fire({
             title: "Enviado!",
-            text: `Recibido 
-            ${usuarioform.name} Gracias por tu mensaje te respondere a
-            ${usuarioform.email} en la brevedad posible`,
+            text: `Recibido ${usuarioform.name} Gracias por tu mensaje te respondere a ${usuarioform.email} en la brevedad posible`,
             icon: "success",
             confirmButtonText: "Aceptar",
           });
@@ -53,15 +51,17 @@ const ContactUs = () => {
   };
 
   const ContainerForm = styled.div`
-    width: 50%;
-    height: 40vh;
+    width: 100%;
+    height: 100vh;
+    background-color: #cfcfcf;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 10vh;
 
     form {
-      width: 40%;
-      height: 30vh;
+      background-color: cadetblue;
+      width: 400px;
+      height: 400px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -69,10 +69,29 @@ const ContactUs = () => {
       border: 0.4rem solid;
       border-radius: 25px;
       input {
-        width: 90%;
+        width: 80%;
+        border: 2px solid;
+        margin-bottom: 30px;
+        padding: 10px;
+        border-radius: 10px;
       }
       textarea {
-        width: 90%;
+        width: 80%;
+        padding: 10px;
+        border: 2px solid;
+        margin-bottom: 30px;
+        border-radius: 10px;
+      }
+      button {
+        border-radius: 25px;
+        width: 50%;
+        height: 40px;
+        transition: 1s;
+        &:hover {
+          background-color: #339cff;
+          transition: 1s;
+          scale: 1.1;
+        }
       }
     }
   `;
@@ -81,13 +100,17 @@ const ContactUs = () => {
     <MainLayout>
       <ContainerForm>
         <form ref={form} onSubmit={sendEmail}>
-          <label>Nombre</label>
-          <input placeholder="Nombre" type="text" name="user_name" />
-          <label>Email</label>
-          <input placeholder="Email" type="email" name="user_email" />
-          <label>Mensaje</label>
-          <textarea placeholder="Escribeme Aquí" name="message" />
-          <input type="submit" value="Send" />
+          <input required placeholder="Nombre" type="text" name="user_name" />
+          <input required placeholder="Email" type="email" name="user_email" />
+          <textarea
+            required
+            placeholder="Escribeme tu mensaje Aquí"
+            name="message"
+            rows="7"
+          />
+          <button type="submit" value="Send">
+            <strong>Enviar</strong>
+          </button>
         </form>
       </ContainerForm>
     </MainLayout>

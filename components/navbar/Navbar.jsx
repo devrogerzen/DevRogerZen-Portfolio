@@ -1,9 +1,10 @@
 import { ActiveLink } from "./ActiveLink";
 import styled from "styled-components";
-import GitHubIcon from "../public/img/icons/github.png";
-import LinkedinIcon from "../public/img/icons/linkedin.png";
+import GitHubIcon from "../../public/img/icons/github.png";
+import LinkedinIcon from "../../public/img/icons/linkedin.png";
 import Image from "next/image";
 import Link from "next/link";
+import LogoDRogerZ from "../../public/logodrogerz.png";
 
 export function Navbar({ href, text }) {
   const Navbar_home = styled.nav`
@@ -14,8 +15,8 @@ export function Navbar({ href, text }) {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .5);
     position: sticky;
     color: #fff;
   `;
@@ -25,6 +26,11 @@ export function Navbar({ href, text }) {
     flex-wrap: nowrap;
     align-items: center;
     font-size: 1.2rem;
+    img {
+      width: 80px;
+      height: 80px;
+      position: relative;
+    }
   `;
 
   const Menu_pages = styled.ul`
@@ -43,6 +49,7 @@ export function Navbar({ href, text }) {
   const Socialicons = styled.div`
     display: flex;
     flex-wrap: nowrap;
+    position: relative;
     img {
       width: 40px;
       height: 40px;
@@ -54,6 +61,7 @@ export function Navbar({ href, text }) {
   return (
     <Navbar_home>
       <Title_logo>
+        <Image src={LogoDRogerZ} alt="LogoDevRogerZen" />
         <h2>D</h2>
         <h3>ev</h3>
         <h2>R</h2>
